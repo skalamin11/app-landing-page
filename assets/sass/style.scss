@@ -1,0 +1,74 @@
+/*=========Google font========*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import "variables";
+@import "home";
+@import "responsive";
+
+/*======BASIC SETUP========*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size:$body-font-size ;
+}
+ul{
+    list-style:none;
+}
+a:link{
+    text-decoration: none;
+    transition: .5s;
+}
+/*======REUSABLE CLASSES========*/
+.container{
+    max-width: 100%;
+    width: $boxed-container;
+    margin: auto;
+}
+.row{
+    padding: 80px 0;
+    display: grid;
+}
+.col{
+    padding: 0 10px;
+}
+.btn {
+    color: #fff;
+    padding: 11px 35px;
+    display: inline-block;
+    font-weight: 600;
+    border: 2px solid;
+    border-radius: 50px;
+    transition: .5s;
+}
+.description{
+    font-size: $description;
+    font-weight: 400;
+    line-height: 1.6;
+}
+.section-title{
+    text-align: center;
+}
+p{
+    color:$secondery-text-color ;
+}
+/*======== Headings========*/
+h2{
+    font-size: $heading-2;
+    font-weight: 700;
+}
+h3{
+    font-size: $heading-3;
+    font-weight: 600;
+}
+h2, h3,h4{
+    color: $primery-text-color;
+    transition: .5s;
+    
+    line-height: 1.4;
+    span{
+        font-weight: 300;
+    }
+}

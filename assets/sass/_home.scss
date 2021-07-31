@@ -1,0 +1,536 @@
+
+/*===================
+====MIXIN=======
+===================*/
+@mixin box-shadow {
+    box-shadow: 0 0 60px -10px  #341b9f1a;
+}
+@mixin primery-btn{
+    color:$primery-color;
+    border-color: $primery-color;
+    &:hover{
+        background: $primery-color;
+        color:$secondery-color;
+        box-shadow: 0 40px 25px -5px #815bfc1c;
+    }
+};
+@mixin secondary-btn{
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    &:hover{
+        border-color: $secondery-color;
+        background: $secondery-color;
+        color: $primery-color;
+    }
+};
+
+/*===================
+NAVBAR DESIGN 
+====================*/
+header{
+    background-color:$primery-color;
+    .container{
+        .row{
+            height: 100px;
+            padding: 0;
+            grid-template-columns: 30% auto;
+            align-items: center;
+            .logo img{
+                width: 150px;
+            }
+            .menu-area{
+                .header-menu{
+                    display: flex;
+                    justify-content: flex-end;
+                    .menu li{
+                        display: inline-block;
+                        padding: 15px;
+                        a{
+                            color: $secondery-color;
+                            &::after{
+                                content: '';
+                                display: block;
+                                height: 2px;
+                                width: 0%;
+                                background-color: $secondery-color;
+                                transition: .5s;
+                                margin-top: 3px;
+                            }
+                            &:hover::after{
+                                
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .menu-btn{
+                        margin-left: 15px;
+                        a{
+                            @include secondary-btn;
+                        }
+                    }
+                }
+                .mobile-menu{
+                    float: right;
+                    padding: 5px 10px;
+                    display: none;
+                    .humburger-icon{
+                        color: $secondery-color;
+                        font-size: 20px;
+                    }
+                    .menu-overlay{
+                        background-color: $primery-text-color;
+                        height: 100%;
+                        width: 100%;
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        overflow: hidden;
+                        z-index: 999;
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: .5s;
+                        a,i{
+                            color: $secondery-color;
+                        }
+                        .close-btn{
+                            text-align: right;
+                            i{
+                                font-size: 20px;
+                                margin:40px;
+                                padding: 10px;
+                                cursor: pointer;
+                                transition: .5s;
+                                &:hover{
+                                    color:$primery-color ;
+                                }
+                            }
+                        }
+                        .menu-overlay-items{
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            
+                            text-align: center;
+                            a{
+                                display: block;
+                                padding: 2px 0;
+                                margin: 3px 0;
+                                &:hover{
+                                    color:$primery-color ;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}
+/*===================
+HEADER BANNER DESIGN
+====================*/
+.banner-area{
+    background: url(../media/banner/banner-three-shape.png), $primery-color;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: $secondery-color;
+    .row{
+        height: 850px;
+        padding: 0;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        .col{
+            .banner-content{
+                h2{
+                    font-size: $heading-large;
+                    padding-bottom: 20px;
+                    color: $secondery-color;
+                }
+                .description{
+                    margin-bottom: 40px;
+                    color: $secondery-color;
+                }
+                .newsletter{
+                    position: relative;
+                    width: 85%;
+                    margin-bottom: 30px;
+                    input{
+                        padding: 18px 5%;
+                        font-size: 16px;
+                        color: #575757;
+                        width: 90%;
+                        outline: none;
+                        border: none;
+                        border-radius: 50px;
+                    }
+                    .btn{
+                        display: inline-block;
+                        background-color: $primery-color;
+                        color: $secondery-color;
+                        position: absolute;
+                        top: 2px;
+                        right: 2px;
+                    }
+                }
+                .video-btn a{
+                    display: flex;
+                    align-items: center;
+                    i{
+                        color: $primery-color;
+                        height: 50px;
+                        width: 50px;
+                        background: rgba(255, 255, 255, 0.8);
+                        text-align: center;
+                        line-height: 50px;
+                        border: 4px solid $secondery-color;
+                        border-radius: 50%;
+                        margin-right: 20px;
+                    }
+                    .description{
+                        color: $secondery-color;
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+            .promo-mockup{
+                text-align: right;
+                img{
+                    width: 63%;
+                }
+            }
+        }
+    }
+}
+/*===================
+FEATURES AREA DESIGN
+====================*/
+.features-area{
+    background:$secondery-color;
+    margin-top: -1px;
+    .features{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 40px;
+        margin-top: 80px;
+        .feature-item{
+            padding: 40px;
+            @include box-shadow;
+            .feature-icon i{
+                color: $primery-color;
+                height: 50px;
+                width: 50px;
+                line-height: 50px;
+                text-align: center;
+                font-size: 18px;
+                border:2px solid $primery-color;
+                border-radius: 50%;
+                transition: .5s;
+            }
+            .feature-content{
+                margin-top: 40px;
+                h3:hover{
+                    color: $primery-color;
+                }
+                p{
+                    margin: 25px 0;
+                }
+                a{
+                    color: $primery-text-color;
+                    font-weight: 500;
+                    i{
+                        transition: .5s;
+                    }
+                    &:hover i{
+                        margin-left: 10px;
+                    }
+                }
+            }
+            &:hover .feature-icon i{
+                color: $secondery-color;
+                background: $primery-color;
+                @include box-shadow;
+            }
+        }
+    }
+
+    /*=======================
+        SMART FEATURES AREA UNDER FEATURES AREA
+    ========================*/
+    .smart-device-features{
+        background:url(../media/background/down-bg.png),$secondery-color;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        background-size:cover;
+        .smart-device-features-content{
+            display: grid;
+            grid-template-columns: 40% auto;
+            grid-gap: 30px;
+            align-items: center;
+            margin-top: 80px;
+            .smart-feature-image img{
+                width: 80%;
+            }
+            .smart-features-item{
+                display: flex;
+                margin:35px 0;
+                .smart-feature-img{
+                    background: $secondery-color;
+                    width: 70px;
+                    height: 70px;
+                    /*padding-top: 14px;
+                    padding-bottom: 10px;*/
+                    margin-right: 20px;
+                    text-align: center;
+                    border-radius: 5px;
+                    @include box-shadow;
+                    img{
+                        padding-top: 15px;
+                    }
+                }
+                .smart-feature-title{
+                    width: 400px;
+                    h3{
+                        font-weight: 400;
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*=======================
+    INTERFACE AREA DESIGN
+========================*/
+.interface{
+    .row{
+        grid-template-columns:auto 50%;
+        grid-gap: 40px;
+        .col{
+            align-self: center;
+            .interface-content {
+                p{
+                    margin: 30px 0;
+                }
+                
+                .interface-features li{
+                    color: $primery-text-color;
+                    i{
+                        color: rgb(0, 192, 0);
+                        margin-right: 20px;
+                    }
+                }
+                .btn{
+                    @include primery-btn;
+                    margin-top: 30px;
+                }
+            }
+            .interface-images{
+                display: flex;
+                align-items: flex-end;
+                img{
+                    width: 100%;
+                }
+                .interface-img-one img{
+                    margin-right: -30px;
+                }
+                .interface-img-two img{
+                    margin-left: -30px;
+                }
+                
+            }
+        }
+        
+    }
+    .row.interface-2{
+        grid-template-columns:45% auto;
+        .interface-img-one{
+            z-index: 1;
+        }
+        .interface-img-two {
+            margin-left: -225px;
+            margin-bottom: 85px;
+        }
+    }
+}
+/*=======================
+SIGNUP AREA design
+=======================*/
+.sign-up{
+    background: $primery-color;
+    .row{
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+        .signup-content{
+            h2{
+                text-align: left;
+                font-size: 50px;
+                padding: 20px 0;
+                font-weight: 700;
+                color: $secondery-color;
+            }
+            p{
+                color: $secondery-color;
+            }
+        }
+        .signup-btn{
+            text-align: right;
+            a{
+                @include secondary-btn;
+                border-color: $secondery-color;
+            }
+        }
+    }
+}
+/*=======================
+APP DOWNLOAD AREA DESIGN
+=========================*/
+.app-download{
+    .row{
+        grid-template-columns: 60% auto;
+        align-items: center;
+        .col{
+            .app-content{
+                padding-right: 15%;
+                p{
+                    padding: auto{
+                        top:20px;
+                        bottom: 30px
+                    };
+                }
+                .app-download-btn{
+                    .btn{
+                        @include primery-btn;
+                        margin-right: 15px;
+                        i{
+                            font-size: 18px;
+                            padding-right: 10px;
+                        }
+                    }
+                    .btn.play-store{
+                        color:$secondery-color;
+                        border-color: $primery-color;
+                        background: $primery-color;
+                        &:hover{
+                            background: $secondery-color;
+                            color:$primery-color;
+                            box-shadow: 0 40px 25px -5px #815bfc1c;
+                        }
+                    }
+                }
+            }
+            .app-image{
+                display: flex;
+                .app-image-one{
+                    z-index: 1;
+                    img{
+                        margin-right: -50px;
+                        width: 100%;
+                    }
+                }
+                .app-image-two img{
+                    margin-left: -70px;
+                    width: 100%;
+                }
+            }
+        }
+        
+    }
+}
+/*=======================
+BLOG AREA DESIGN
+=========================*/
+.blog{
+    background: #f8f8f8;
+    .all-blogs{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+        margin-top: 70px;
+        .featured-image img{
+            width: 100%;
+            border-radius: 5px;
+        }
+        .blog-meta{
+            padding: 10px 0;
+            a{
+                margin: 0 5px;
+            }
+        }
+        .blog-title h3{
+            font-size: 25px;
+            a:hover{
+                color: $primery-color;
+            }
+        }
+        .blog-excerpt{
+            padding: 15px 0;
+        }
+        .blog-btn .btn{
+            @include primery-btn;
+            margin-top: 10px;
+        }
+    }
+}
+/**==================
+FOOTER AREA DESIGN
+==================*/
+footer{
+    background: $primery-text-color;
+    p,a,i{
+        color: #b2b2b2;
+    }
+    .row{
+        padding-bottom: 0;
+        .footer-top{
+            display:grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-gap: 20px;
+            padding-bottom:80px;
+            border-bottom: 1px solid #b2b2b2;
+            .footer-items{
+                h3{
+                    color: $secondery-color;
+                    margin-bottom: 30px;
+                }
+                .footer-menu li a{
+                    margin: 5px 0;
+                    display: inline-block;
+                    &:hover{
+                        color: $primery-color;
+                    }
+                }
+                .social-icons{
+                    margin-top: 30px;
+                    a i{
+                        height: 35px;
+                        width: 35px;
+                        border: 2px solid #b2b2b2;
+                        text-align: center;
+                        line-height: 35px;
+                        color: $secondery-text-color;
+                        border-radius: 50%;
+                        transition: .5s;
+                        margin-right: 10px;
+                        &:hover{
+                            color: $secondery-color;
+                            border-color: $primery-color;
+                            background: $primery-color;
+                        }
+                    }
+                }
+            }
+        }
+        .footer-bottom{
+            padding: 25px 0;
+            display: flex;
+            justify-content: space-between;
+            .privecy-policy a:hover{
+                color: $primery-color;
+            }
+        }
+    }
+}

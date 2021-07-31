@@ -1,0 +1,169 @@
+/*===================================
+SMALL DEVICES: 992PX - 1200PX OR MORE
+=====================================*/
+@media screen and (max-width:1200px) {
+    .sign-up h2 {
+        font-size: 45px!important;
+    }
+}
+/*==============================
+MEDIUM DEVICES: 769PX-991PX
+===============================*/
+@media screen and (max-width:991px) {
+    header{
+        nav{
+            display: none!important;
+        }
+        .mobile-menu{
+            display: block !important;
+        }
+    }
+    
+    .banner-area .row .col{
+        .promo-mockup img {
+            width: 80%;
+        }
+        .banner-content .newsletter{
+            width: 100%;
+        }
+    } 
+    .features-area{
+        .features {
+            grid-gap: 10px;
+            .feature-item{
+                padding: 30px 20px;
+            }
+        }
+        .smart-device-features .smart-device-features-content{
+            grid-template-columns: 30% auto!important;
+            grid-gap: 25px;
+            .smart-feature-image img{
+                width: 100% !important;
+            }
+            .smart-features-item{
+                margin:15px 0;
+            }
+        }
+    }
+    .interface .interface-img-two img {
+        margin-left: 0px !important;
+    }
+    .app-download .row{
+        .app-content{
+            padding-right:0 !important;
+        }
+        .app-image img{
+            width: 100%;
+        }
+        .app-image .app-image-two img{
+            width: 90%;
+        }
+    }
+    footer .row .footer-top {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 50px;
+    }
+}
+/*==============================
+SMALL DEVICES: 481PX-768PX
+===============================*/
+@media screen and (max-width:768px){
+    .row{
+        grid-template-columns: auto !important;
+    }
+    header .container .row{
+        grid-template-columns: auto auto!important;
+    }
+    .banner-area .row{
+        height: auto;
+        padding: 100px 0;
+    }
+    h2{
+        font-size: 30px !important;
+    }
+    .banner-area .row{
+        grid-template-columns: auto;
+        .banner-content h2{
+            font-size: 45px !important;
+        }
+        .promo-mockup{
+            display: none;
+        }
+    }
+    .features-area .features{
+        display: block;
+        .feature-item{
+            margin: 25px 0;
+        }
+    }
+    .features-area .smart-device-features .smart-device-features-content{
+        display: block;
+        .smart-feature-image{
+            text-align: center;
+            img{
+                width: 60% !important;
+            }
+        }
+        .smart-features-item .smart-feature-title{
+            width: 75%;
+        }
+    }
+    .sign-up .row{
+        h2{
+            font-size: 35px !important;
+        }
+        .signup-btn{
+            text-align: left;
+            margin-top: 30px;
+        }
+    }
+    .app-download .app-image {
+        margin-top: 50px !important;
+    }
+    .blog .all-blogs{
+        grid-template-columns: auto;
+        grid-gap: 40px;
+    }
+    footer .social-icons a i {
+        margin-right: 5px !important;
+    }
+}
+/*==============================
+EXTRA SMALL DEVICES: 320PX-480PX
+===============================*/
+@media screen and (max-width:480px){
+    h2, .sign-up .row h2 {
+        font-size: 25px !important;
+    }
+    .banner-area .row .col{
+        .banner-content h2{
+            font-size: 35px !important;
+        }
+        .banner-content .newsletter .btn {
+            position:unset;
+            margin-top: 10px;
+        }
+    }
+    .features-area .smart-feature-title h3{
+        font-size: 16px !important;
+        margin-top: 0 !important;
+    }
+    .app-download .app-download-btn a{
+        margin: 10px 0;
+    }
+    footer .row {
+        .footer-top {
+            grid-template-columns: auto;
+            .footer-items h3 {
+                margin-bottom: 10px ;
+            }
+        }
+        .footer-bottom {
+            display: block;
+            text-align: center;
+        }
+    }
+}
+
+
+
