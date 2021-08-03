@@ -9,3 +9,5 @@ function closeNav(){
 	document.getElementById("menu-overlay").style.opacity="0";
 	document.getElementById("menu-overlay").style.visibility="hidden";
 };
+/*  WOW.JS ACTIVATION */
+new WOW().init();
