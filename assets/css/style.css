@@ -11,6 +11,10 @@ NAVBAR DESIGN
 ====================*/
 header {
   background-color: #815BFC;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 header .container .row {
@@ -21,6 +25,8 @@ header .container .row {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 header .container .row .logo img {
@@ -141,6 +147,26 @@ header .container .row .menu-area .mobile-menu .menu-overlay .menu-overlay-items
   color: #815BFC;
 }
 
+/*====================
+STICKY HEADER
+====================*/
+header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 5px;
+  -webkit-box-shadow: 0 0 10px #2B2350;
+          box-shadow: 0 0 10px #2B2350;
+  z-index: 99999;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+header.sticky .row {
+  height: 65px;
+}
+
 /*===================
 HEADER BANNER DESIGN
 ====================*/
@@ -155,6 +181,7 @@ HEADER BANNER DESIGN
 .banner-area .row {
   height: 850px;
   padding: 0;
+  padding-top: 100px;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   -webkit-box-align: center;
@@ -603,6 +630,25 @@ BLOG AREA DESIGN
   color: #FFFFFF;
   -webkit-box-shadow: 0 40px 25px -5px #815bfc1c;
           box-shadow: 0 40px 25px -5px #815bfc1c;
+}
+
+/*===============
+GO TO TOP BUTTON
+================*/
+i.go-to-top {
+  background: #FFFFFF;
+  height: 30px;
+  width: 30px;
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+  -webkit-box-shadow: 0 0 5px #2B2350;
+          box-shadow: 0 0 5px #2B2350;
+  text-align: center;
+  color: #2B2350;
+  line-height: 30px;
+  cursor: pointer;
+  border-radius: 10px;
 }
 
 /**==================

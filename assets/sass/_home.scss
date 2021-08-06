@@ -29,12 +29,17 @@ NAVBAR DESIGN
 ====================*/
 header{
     background-color:$primery-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     .container{
         .row{
             height: 100px;
             padding: 0;
             grid-template-columns: 30% auto;
             align-items: center;
+            transition: .5s;
             .logo img{
                 width: 150px;
             }
@@ -128,6 +133,23 @@ header{
         }
     }
 }
+
+/*====================
+STICKY HEADER
+====================*/
+header.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top:5px;
+    box-shadow: 0 0 10px $primery-text-color;
+    z-index: 99999;
+    transition: .5s;
+    .row{
+        height: 65px;
+    }
+}
 /*===================
 HEADER BANNER DESIGN
 ====================*/
@@ -140,6 +162,7 @@ HEADER BANNER DESIGN
     .row{
         height: 850px;
         padding: 0;
+        padding-top: 100px;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
         .col{
@@ -474,6 +497,23 @@ BLOG AREA DESIGN
             margin-top: 10px;
         }
     }
+}
+/*===============
+GO TO TOP BUTTON
+================*/
+i.go-to-top {
+    background: $secondery-color;
+    height: 30px;
+    width: 30px;
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    box-shadow: 0 0 5px $primery-text-color;
+    text-align: center;
+    color: $primery-text-color;
+    line-height: 30px;
+    cursor: pointer;
+    border-radius: 10px;
 }
 /**==================
 FOOTER AREA DESIGN
